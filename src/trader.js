@@ -24,6 +24,17 @@ let available_balances = []
 
 let minimums = {}
 
+let alt
+        let baseCoin
+        if (signal.pair.endsWith("BTC")) {
+            alt = signal.pair.replace("BTC", "")
+            baseCoin = "BTC"
+        } else if (signal.pair.endsWith("USDT")) {
+            alt = signal.pair.replace("USDT", "")
+            baseCoin = "USDT"
+        }
+        const coinPair = alt + baseCoin;
+
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -36,31 +47,54 @@ const notifier = require('./notifiers')(trading_pairs);
 //////////////////////////////////////////////////////////////////////////////////
 
 const margin_pairs = [
+    "AAVEBTC",
     "ADABTC",
+    "ALGOBTC",
     "ATOMBTC",
     "BATBTC",
     "BCHBTC",
     "BNBBTC",
+    "BTCBUSD",
+    "BTCEUR",
+    "BTCGBP",
+    "BTCUSDC",
+    "BTCUSDT",
+    "COMPBTC",
+    "CRVBTC",
     "DASHBTC",
+    "DOGEBTC",
+    "DOTBTC",
     "EOSBTC",
     "ETCBTC",
     "ETHBTC",
+    "FILBTC",
+    "GRTBTC",
     "IOSTBTC",
     "IOTABTC",
     "LINKBTC",
     "LTCBTC",
     "MATICBTC",
+    "NEARBTC",
     "NEOBTC",
+    "OMGBTC",
     "ONTBTC",
     "QTUMBTC",
     "RVNBTC",
+    "SNXBTC",
+    "SUSHIBTC",
+    "THETABTC",
     "TRXBTC",
+    "UNIBTC",
     "VETBTC",
+    "WAVESBTC",
     "XLMBTC",
     "XMRBTC",
     "XRPBTC",
     "XTZBTC",
+    "YFIBTC",
+    "YFIIBTC",
     "ZECBTC",
+    "ZILBTC",
 ]
 
 //////////////////////////////////////////////////////////////////////////////////
