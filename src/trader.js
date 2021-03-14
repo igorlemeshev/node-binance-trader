@@ -31,6 +31,17 @@ const tradingData = {
     margin_pairs: [],
 }
 
+let alt
+        let baseCoin
+        if (signal.pair.endsWith("BTC")) {
+            alt = signal.pair.replace("BTC", "")
+            baseCoin = "BTC"
+        } else if (signal.pair.endsWith("USDT")) {
+            alt = signal.pair.replace("USDT", "")
+            baseCoin = "USDT"
+        }
+        const coinPair = alt + baseCoin;
+
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
