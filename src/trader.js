@@ -115,6 +115,11 @@ socket.on("buy_signal", async (signal) => {
             )
 
             const alt = signal.pair.replace("BTC", "")
+            if (alt =="DOGE")
+            {
+                console.log("No more doge")
+                return;
+            }
             if (minimums[alt + "BTC"] && minimums[alt + "BTC"].minQty) {
                 const buy_amount = new BigNumber(
                     user_payload[tresult].buy_amount
