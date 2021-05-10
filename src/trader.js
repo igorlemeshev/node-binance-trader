@@ -62,7 +62,7 @@ const margin_pairs = [
     "XTZBTC",
     "ZECBTC",
 ]
-
+/
 //////////////////////////////////////////////////////////////////////////////////
 
 const bnb_client = new Binance().options({
